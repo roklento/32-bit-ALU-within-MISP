@@ -1,0 +1,212 @@
+# Reading pref.tcl
+# do hw2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/myAnd.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:35 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/myAnd.v 
+# -- Compiling module myAnd
+# 
+# Top level modules:
+# 	myAnd
+# End time: 20:55:35 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/thirty_two_bit_cla.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:36 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/thirty_two_bit_cla.v 
+# -- Compiling module thirty_two_bit_cla
+# 
+# Top level modules:
+# 	thirty_two_bit_cla
+# End time: 20:55:36 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/setLessThan.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:36 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/setLessThan.v 
+# -- Compiling module setLessThan
+# 
+# Top level modules:
+# 	setLessThan
+# End time: 20:55:36 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/myXor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:36 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/myXor.v 
+# -- Compiling module myXor
+# 
+# Top level modules:
+# 	myXor
+# End time: 20:55:36 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/myOr.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:36 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/myOr.v 
+# -- Compiling module myOr
+# 
+# Top level modules:
+# 	myOr
+# End time: 20:55:36 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/myNor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:36 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/myNor.v 
+# -- Compiling module myNor
+# 
+# Top level modules:
+# 	myNor
+# End time: 20:55:36 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/myMod.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:36 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/myMod.v 
+# -- Compiling module myMod
+# 
+# Top level modules:
+# 	myMod
+# End time: 20:55:36 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/mux8x1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:36 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/mux8x1.v 
+# -- Compiling module mux8x1
+# 
+# Top level modules:
+# 	mux8x1
+# End time: 20:55:37 on Dec 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/mux2x1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:37 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/mux2x1.v 
+# -- Compiling module mux2x1
+# 
+# Top level modules:
+# 	mux2x1
+# End time: 20:55:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/mod_dp.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:37 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/mod_dp.v 
+# -- Compiling module mod_dp
+# 
+# Top level modules:
+# 	mod_dp
+# End time: 20:55:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/mod_cu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:37 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/mod_cu.v 
+# -- Compiling module mod_cu
+# 
+# Top level modules:
+# 	mod_cu
+# End time: 20:55:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/half_adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:37 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/half_adder.v 
+# -- Compiling module half_adder
+# 
+# Top level modules:
+# 	half_adder
+# End time: 20:55:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/full_adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:37 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/full_adder.v 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 20:55:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/four_bit_cla.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:37 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/four_bit_cla.v 
+# -- Compiling module four_bit_cla
+# 
+# Top level modules:
+# 	four_bit_cla
+# End time: 20:55:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/alu32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:38 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/alu32.v 
+# -- Compiling module alu32
+# 
+# Top level modules:
+# 	alu32
+# End time: 20:55:38 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ahmet/hw2 {C:/Users/ahmet/hw2/alu32_testbench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:38 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ahmet/hw2" C:/Users/ahmet/hw2/alu32_testbench.v 
+# -- Compiling module alu32_testbench
+# 
+# Top level modules:
+# 	alu32_testbench
+# End time: 20:55:38 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  alu32_testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" alu32_testbench 
+# Start time: 20:55:38 on Dec 10,2023
+# Loading work.alu32_testbench
+# Loading work.alu32
+# Loading work.myAnd
+# Loading work.myOr
+# Loading work.myXor
+# Loading work.myNor
+# Loading work.setLessThan
+# Loading work.thirty_two_bit_cla
+# Loading work.four_bit_cla
+# Loading work.full_adder
+# Loading work.half_adder
+# Loading work.myMod
+# Loading work.mod_cu
+# Loading work.mod_dp
+# Loading work.mux8x1
+# Loading work.mux2x1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# time = 41, a =00000000000000000000000000001111, b=00000000000000000000000000001010, s=000, res=00000000000000000000000000001010
+# time = 82, a =00000000000000000000000000001111, b=00000000000000000000000000000101, s=001, res=00000000000000000000000000001111
+# time = 103, a =00000000000000000000000000100000, b=00000000000000000000000000000111, s=010, res=00000000000000000000000000100111
+# time = 104, a =00000000000000000000000001000001, b=00000000000000000000000000001000, s=011, res=11111111111111111111111110110110
+# time = 125, a =00000000000000000000000000001111, b=00000000000000000000000000100011, s=100, res=00000000000000000000000000000001
+# time = 146, a =00000000000000000000000000110110, b=00000000000000000000000001000011, s=101, res=00000000000000000000000001111001
+# time = 167, a =00000000000000000000000000101110, b=00000000000000000000000000100000, s=110, res=00000000000000000000000000001110
+# time = 261, a =00000000000000000000000000000101, b=00000000000000000000000000001100, s=111, res=00000000000000000000000000000101
+# Break key hit
+# Break in Module alu32_testbench at C:/Users/ahmet/hw2/alu32_testbench.v line 14
+# End time: 21:03:47 on Dec 10,2023, Elapsed time: 0:08:09
+# Errors: 0, Warnings: 0

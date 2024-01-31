@@ -1,0 +1,148 @@
+`define DELAY 20
+module alu32_testbench(); 
+
+reg clk, reset, start;
+reg [31:0]a;
+reg [31:0]b;
+reg [2:0]s;
+wire [31:0]res;
+wire done;
+alu32 tst(clk,reset,start,done,a,b,s,res);
+
+initial begin
+    clk = 0;
+    forever #20 clk = ~clk;  // Saat frekansını ayarlayın (örneğin, her 10 zaman biriminde değişim)
+end
+
+
+initial begin
+
+reset = 1;  #40; reset = 0;  // Reset işlemini başlat ve bitir
+a = 32'd5;  // Örnek: 5 (32 bit formatında)
+b = 32'd10; // Örnek: 10
+s  = 3'b000;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+a = 32'd12;  // Örnek: 5 (32 bit formatında)
+b = 32'd10; // Örnek: 10;
+s  = 3'b000;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+
+
+
+a = 32'd15; // Örnek: 15
+b = 32'd5;  // Örnek: 5
+s  = 3'b001;
+#`DELAY;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+a = 32'd13;  // Örnek: 5 (32 bit formatında)
+b = 32'd10; // Örnek: 10
+s  = 3'b001;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+
+
+
+	 start = 1;
+	a = 32'd10; // Örnek: 10
+	b = 32'd3;  // Örnek: 3
+    s = 3'b010; // Select MOD operation
+    #`DELAY;
+
+    // Wait for MOD operation to complete
+    wait(done == 1);
+    #1;  // Small delay to avoid race conditions
+    $display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+    start = 0; // Stop the MOD operation
+    wait(done == 0);  // Wait for done to go low
+    #`DELAY;  // Wait a moment before the next test
+
+
+
+a = 32'hAA; // Örnek: 0xAA (32 bit formatında)
+b = 32'h55; // Örnek: 0x55
+s  = 3'b011;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+a = 32'b0000_0000_0000_0000_0000_1111_0000_1111;	//xor2
+b = 32'b0000_0000_0000_0000_1111_1111_1111_1111;
+s  = 3'b011;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+
+
+
+a = 32'hFF; // Örnek: 0xFF
+b = 32'h0F; // Örnek: 0x0F
+s  = 3'b100;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+a = 32'b0000_0000_0000_0000_0000_1111_0000_1111;	//and2
+b = 32'b0000_0000_0000_0000_1111_1111_1111_1111;
+s  = 3'b100;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+
+
+
+a = 32'hA0; // Örnek: 0xA0
+b = 32'h05; // Örnek: 0x05
+s  = 3'b101;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+a = 32'b0000_0000_0000_0000_0000_1111_0000_1111;	//or2
+b = 32'b0000_0000_0000_0000_1111_1111_1111_1111;
+s  = 3'b101;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+
+
+
+a = 32'd5;  // Örnek: 5
+b = 32'd10; // Örnek: 10
+s  = 3'b110;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+a = 32'b0000_0010_1111_1010_0010_1010_0100_0000;	//slt2
+b = 32'b0000_0000_1111_1010_0000_1010_0100_0000;
+s  = 3'b110;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+
+
+
+a = 32'h0;  // Örnek: 0x00
+b = 32'h0;  // Örnek: 0x00
+s  = 3'b111;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+a = 32'b0000_0000_0000_0000_0000_1111_0000_1111;	//nor2
+b = 32'b0000_0000_0000_0000_1111_1111_1111_1111;
+s  = 3'b111;
+#1;
+$display("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+#`DELAY;
+
+end
+
+/*initial begin
+if(s !== 3'b010) begin
+		$monitor("time = %2d, a =%32b, b=%32b, s=%3b, res=%32b", $time, a, b, s, res);
+		end
+end*/
+ 
+endmodule

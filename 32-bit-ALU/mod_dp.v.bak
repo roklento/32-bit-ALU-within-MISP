@@ -1,0 +1,28 @@
+module mod_dp(
+    input clk,        // Clock signal
+    input reset,      // Reset signal
+    input [31:0] A,   // Input A
+    input [31:0] B,   // Input B
+    input ld_temp,    // Load TEMP signal
+    input sub,        // Subtract signal
+    output reg [31:0] TEMP,  // TEMP register to hold the temporary result
+    output comp       // Comparison result (TEMP >= B)
+);
+
+// Temporarily store the result of the subtraction
+
+// Perform subtraction and update TEMP
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        TEMP <= 0;
+    end else if (ld_temp) begin
+        TEMP <= A;  // Load TEMP with A
+    end else if (sub) begin
+        TEMP <= TEMP - B;  // Subtract B from TEMP
+    end
+end
+
+// Compare TEMP with B and output the result
+assign comp = (TEMP >= B);
+
+endmodule

@@ -1,0 +1,36 @@
+module myMod(
+    input clk,      // Clock signal
+    input reset,    // Reset signal
+    input start,    // Start signal for the MOD operation
+    input [31:0] A, // Input A for the MOD operation
+    input [31:0] B, // Input B for the MOD operation
+    output [31:0] result, // Result of the MOD operation
+    output done           // Done signal to indicate completion
+);
+
+// Sinyalleri tanımlayın
+wire ld_temp, sub, comp;
+
+// Kontrol ünitesi ve veriyolu modüllerini örneklendirin
+mod_cu control_unit(
+    .clk(clk),
+    .reset(reset),
+    .start(start),
+    .comp(comp),
+    .ld_temp(ld_temp),
+    .sub(sub),
+    .done(done)
+);
+
+mod_dp datapath(
+    .clk(clk),
+    .reset(reset),
+    .A(A),
+    .B(B),
+    .ld_temp(ld_temp),
+    .sub(sub),
+    .TEMP(result),
+    .comp(comp)
+);
+
+endmodule

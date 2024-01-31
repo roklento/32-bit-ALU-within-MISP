@@ -1,0 +1,61 @@
+module alu32 (
+input clk, 
+input reset,
+input start,
+input done,
+    input [31:0] A,
+    input [31:0] B, 
+    input [2:0] S,
+    output [31:0] R
+);
+
+    // Operations codes
+    localparam ADD = 3'b000;
+    localparam SUB = 3'b001;
+    localparam MOD = 3'b010;
+    localparam XOR = 3'b011;
+    localparam AND = 3'b100;
+    localparam OR  = 3'b101;
+    localparam SLT = 3'b110;
+    localparam NOR = 3'b111;
+
+    // Intermediate wires
+    wire [31:0] wAnd;
+    wire [31:0] wOr;
+    wire [31:0] wXor;
+    wire [31:0] wNor;
+    wire [31:0] wCLA_Add;
+    wire [31:0] wCLA_Sub;
+    wire [31:0] wSlt;
+    wire [31:0] wMod;  // Wire for the mod result
+    wire carry_out;
+    wire wCarry_out;
+    wire borrow;
+	 
+myMod mod_instance (
+    .clk(clk),
+    .reset(reset),
+    .start(start),
+    .A(A),
+    .B(B),
+    .result(wMod),
+    .done(done)
+);
+
+    // Not needed for the mod operation, but included for completeness
+    wire [31:0] notB = ~B;
+
+    // Instantiation of other operations
+    myAnd s3(wAnd, A, B);
+    myOr s7(wOr, A, B);
+    myXor s4(wXor, A, B);
+    myNor s5(wNor, A, B);
+    setLessThan s1(wSlt, A, B);
+    thirty_two_bit_cla cla1(A, B, 1'b0, wCLA_Add, wCarry_out);
+    thirty_two_bit_cla cla2(A, notB, 1'b1, wCLA_Sub, wCarry_out);
+	 
+
+    // Multiplexer for selecting the operation
+    mux8x1 sf(wCLA_Add,wAnd,wMod,wSlt,wCLA_Sub,wOr,wXor,wNor,S,R);
+    
+endmodule

@@ -1,0 +1,6 @@
+
+State Machine - |alu32|myMod:s8|mod_cu:control_unit|current_state
+Name current_state.S_IDLE current_state.S_DONE current_state.S_SUBTRACT 
+current_state.S_IDLE 0 0 0 
+current_state.S_SUBTRACT 1 0 1 
+current_state.S_DONE 1 1 0 
